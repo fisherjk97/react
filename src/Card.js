@@ -1,4 +1,30 @@
 import React, { Component } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
+
+
+library.add(fab, fas, far);
+
+const iconsStyle = {
+    padding: '20px',
+    textAlign: 'center',
+ };
+
+ const bold = {
+   fontWeight: 'bold'
+};
+
+const center = {
+  textAlign: 'center'
+};
+const undoPadding = {
+    padding: 'unset'
+  };
+
+
 
 class Card extends React.Component {
     constructor(props){
@@ -12,6 +38,8 @@ class Card extends React.Component {
 
       
     }
+
+    
     render() {
             if(this.props.type === 'image'){
                 return <div class="card" className="App-card">
@@ -28,7 +56,20 @@ class Card extends React.Component {
                             <p class="card-text">{this.props.text}</p>
                             </div>
                         </div>
-            }else{
+            } else if(this.props.type === "fa"){
+                return <div class="card" className="App-card">
+                            <div class="card-body" style={undoPadding}>
+                             <div style={iconsStyle} >
+                                <FontAwesomeIcon icon={[this.props.iconType, this.props.icon]} size={this.props.size}  />
+                            </div>
+                            <h5 class="card-title">{this.props.title}</h5>
+                            <p class="card-text">{this.props.text}</p>
+                            </div>
+                        </div>
+            }
+            
+            
+            else{
                 return <div class="card" className="App-card">
                     <div class="card-body">
                         <h1><span className="App-card-header">{this.props.header}</span></h1>
