@@ -15,10 +15,24 @@
 }
 
 .App-card {
-  width: 18rem;
   pointer-events: all;
-  min-height: 10rem;
+  min-height: 18rem;
+  max-height: 18rem;
+  max-width: 20rem;;
+  padding: 20px;
+}
 
+.App-card-image {
+  pointer-events: all;
+  min-height: 12rem;
+  max-height: 12rem;
+}
+
+.App-card-header {
+  padding: 50px;
+  text-align: center;
+  color: black;
+  font-size: 60px;
 }
 
 
@@ -35,7 +49,7 @@
 }
 
 .App-header {
-  background-color: #6e0c0cde;
+  background-color: #681212de;
   min-height: 50vh;
   display: flex;
   flex-direction: column;
@@ -46,8 +60,8 @@
 }
 
 .App-footer {
-  background-color: #6e0c0cde;
-  min-height: 30vh;
+  background-color: #681212de;
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -61,6 +75,13 @@
 }
 
 .App-about {
+  text-align: center;
+  padding: 20px;
+}
+
+#about {
+  display: flex;
+  justify-content: center;
   text-align: center;
 }
 

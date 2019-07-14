@@ -2,7 +2,10 @@ import React from 'react';
 import linkedIn from './linkedIn-logo.png';
 import profile from './john-headshot.png';
 import awsdev from './awsdev.jpg';
+import github from './github.png';
+import githubmark from './github-mark.png';
 import './App.css';
+import Card from './Card.js';
 
 function App() {
   return (
@@ -12,55 +15,48 @@ function App() {
         <p>
           Hello, I'm John Fisher and I'm a full-stack developer. 
         </p>
+        
       </header>
-      <section id="about" className="App-about">
-        <h3>About</h3>
+      <section id="about">
         <div className='rows'>
           <div className='row'>
-            <div class="card" className="App-card">
-              <div class="card-body">
-                <h1><span>5+</span></h1>
-                <p class="card-text">Years of professional experience</p>
-              </div>
-            </div>
-            <div class="card" className="App-card">
-              <div class="card-body">
-              <a
-                className="App-link"
-                href="https://www.certmetrics.com/amazon/public/badge.aspx?i=2&t=c&d=2019-04-06&ci=AWS00767207"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img src={awsdev} className="App-aws" alt="Validate certification"/>
-              </a>
-              </div>
-        </div>
-        <div class="card" className="App-card">
-            
-          <div class="card-body">
-          <a
-              className="App-link"
-              href="https://www.linkedin.com/in/john-k-fisher/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-            <img src={linkedIn} className="App-linkedIn" alt="View my LinkedIn profile" />
-            </a>
-          </div>
+          <Card header="5+" 
+                title="Years of professional experience"
+                text="C#, SQL, Java, JavaScript, AngularJS (1.5)"
+          ></Card>
+          <Card type="image" 
+                text="I am an AWS certified developer"
+                src={awsdev} 
+                link={"https://www.certmetrics.com/amazon/public/badge.aspx?i=2&t=c&d=2019-04-06&ci=AWS00767207"}
+                alt={"Validate certification"}>
+          </Card>
+          <Card type="image" 
+                text="Check me out on LinkedIn!"
+                src={linkedIn} 
+                link={"https://www.linkedin.com/in/john-k-fisher/"}
+                alt={"View Profile"}>
+          </Card>
+          <Card type="image" 
+                text="Check out my GitHub portfolio!"
+                src={githubmark} 
+                link={"https://github.com/fisherjk97"}
+                alt={"View GitHub Profile"}>
+          </Card>
+          
         </div>
         
-          </div>
+        
           <div className='row'></div>
           <div className='row'></div>
       </div>
       
       </section>
-      
       <footer className="App-footer">
       
       </footer>
     </div>
   );
 }
+
 
 export default App;
