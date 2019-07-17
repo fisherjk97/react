@@ -73,9 +73,11 @@ const center = {
       <header id="header" className="App-header App-header-background">
         <img src={profile} className="App-profile" alt="logo" />
         <br/>
+        <div className="App-header-text bg-red">
         <p>
           Hello, I'm John Fisher and I'm a full-stack developer. 
         </p>
+        </div>
       </header>
 
       <section id="about" class="container">
