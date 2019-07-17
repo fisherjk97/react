@@ -12,9 +12,8 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 import Image from 'react-bootstrap/Image'
 import { AppRegistry, StyleSheet, Text, View, ImageBackground} from 'react-native';
 import { Button, Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import { link } from 'fs';
 library.add(fab, fas, far);
-
-
 
 function App() {
 
@@ -46,10 +45,12 @@ const center = {
   textAlign: 'center'
 };
 
+
+
   return (
     <div className="App">
-  <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
-  <Navbar.Brand href="#header">John Fisher</Navbar.Brand>
+  <Navbar collapseOnSelect bg="dark" variant="dark" expand="lg" sticky="top">
+  <Navbar.Brand>John Fisher</Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
     <Nav className="mr-auto">
@@ -87,14 +88,17 @@ const center = {
             </ul>
             */}
             <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
-                <Card type="fa" iconType="fas" size="3x" icon="laptop-code"  text="I'm a senior level software engineer with over 5 years of professional experience. Most of my work involves designing and developing web applications and services, but I'm also a subject matter expert for internal IT and business partners."/>
+            <div class="col-lg-3 col-md-6 col-sm-12 d-flex align-items-stretch">
+                <Card type="fa" iconType="fas" size="3x" icon="laptop-code"  text="I'm a senior level software engineer with over 5 years of professional experience. Most of my work involves designing and developing web applications and services."/>
               </div>
-              <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
-                <Card type="fa" iconType="fas" size="3x"icon="user-graduate" text="I currently live in Colorado, but my origin story begins in the Midwest. I grew up in the Twin Cities (Maple Grove, MN), graduated with a degree in Computer Science from University of Wisconsin - Eau Claire, and lived and worked in the Green Bay, WI area for a couple of years before moving out here."/>
+              <div class="col-lg-3 col-md-6 col-sm-12 d-flex align-items-stretch">
+                <Card type="fa" iconType="fas" size="3x"icon="user-graduate" text="I graduated with a Bachelor's Degree in Computer Science back in May 2015 from the from University of Wisconsin - Eau Claire (UWEC)."/>
               </div>
-              <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-stretch">
-                <Card type="fa" iconType="fas" size="3x" icon="gamepad" text="It shouldn't be too suprising that gaming introduced me to the world of coding. You'll often find me online playing PlayStation or PC games with my friends and family."/>
+              <div class="col-lg-3 col-md-6 col-sm-12 d-flex align-items-stretch">
+                <Card type="fa" iconType="fas" size="3x"icon="map-pin" text="I currently live and work remotely in Colorado, but my origin story begins in the Midwest. I grew up in the Twin Cities, but also spent a couple years working in Green Bay, WI."/>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-12 d-flex align-items-stretch">
+                <Card type="fa" iconType="fas" size="3x" icon="gamepad" text="It shouldn't be too suprising that gaming introduced me to the world of coding. You'll often find me online playing a variety of video games with friends and family."/>
               </div>
             
             </div>
@@ -105,7 +109,7 @@ const center = {
           <h1 style={center}>Technical Skills</h1>
           <h3>Certifications</h3>
             <ul>
-              <li>AWS Certified Developer - Associate</li>
+              <li><a className="App-link" href="#" onClick={()=> openLink(links.aws)} title="Validate Certification">AWS Certified Developer - Associate</a></li>
             </ul>
             <h3>Programming Languages</h3>
             <ul>
@@ -125,16 +129,13 @@ const center = {
         <h1 style={center}>Contact</h1>
           <div class="row" >
             <div style={iconsStyle} >
-              <FontAwesomeIcon icon={['fab', 'linkedin']} size="2x" className="App-link" onClick={()=> openLink(links.linkedIn)} />
+              <FontAwesomeIcon icon={['fab', 'linkedin']} size="2x" className="App-link" onClick={()=> openLink(links.linkedIn)} title="View my LinkedIn profile" />
            </div>
            <div style={iconsStyle} >
-              <FontAwesomeIcon icon={['fab', 'github']} size="2x" className="App-link" onClick={()=> openLink(links.github)} />
+              <FontAwesomeIcon icon={['fab', 'github']} size="2x" className="App-link" onClick={()=> openLink(links.github)} title="View my GitHub profile"/>
            </div>
            <div style={iconsStyle} >
-              <FontAwesomeIcon icon={['fab', 'aws']} size="2x" className="App-link" onClick={()=> openLink(links.aws)} />
-           </div>
-           <div style={iconsStyle} >
-              <FontAwesomeIcon icon={['far', 'envelope']} size="2x" className="App-link" onClick={()=> sendEmail()}/>
+              <FontAwesomeIcon icon={['far', 'envelope']} size="2x" className="App-link" onClick={()=> sendEmail()} title="Contact me directly via email"/>
            </div>
           </div>
         </div>

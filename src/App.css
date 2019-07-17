@@ -99,11 +99,24 @@
   padding: 20px;
 }
 
-#about, #skills {
+#about {
   display: flex;
   justify-content: center;
   text-align: left;
-  padding: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+ #skills {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 60px;
+  padding-bottom: 20px;
 }
 
 ul > li {

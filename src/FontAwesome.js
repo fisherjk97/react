@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // create our App
 const App = () => (
   <div>
-    <FontAwesomeIcon icon={faHome} />
+    <FontAwesomeIcon icon={faHome}/>
   </div>
 );
 
