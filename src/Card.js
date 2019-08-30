@@ -4,7 +4,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
-
+import './'
 
 library.add(fab, fas, far);
 
@@ -52,29 +52,29 @@ class Card extends React.Component {
                                 >
                             <img src={this.props.src} className="App-card-image" alt={this.props.alt}/>
                             </a>
-                            <h5 class="card-title">{this.props.title}</h5>
-                            <p class="card-text">{this.props.text}</p>
+                            <h5 className="card-title">{this.props.title}</h5>
+                            <p className="card-text">{this.props.text}</p>
                             </div>
                         </div>
             } else if(this.props.type === "fa"){
-                return <div class="card" className="App-card">
-                            <div class="card-body" style={undoPadding}>
+                return <div className="card" className="App-card">
+                            <div className="card-body" style={undoPadding}>
                              <div style={iconsStyle} >
                                 <FontAwesomeIcon icon={[this.props.iconType, this.props.icon]} size={this.props.size}  />
                             </div>
-                            <h5 class="card-title">{this.props.title}</h5>
-                            <p class="card-text">{this.props.text}</p>
+                            <h5 className="card-title">{this.props.title}</h5>
+                            <p className="card-text">{this.props.text}</p>
                             </div>
                         </div>
             }
             
             
             else{
-                return <div class="card" className="App-card">
-                    <div class="card-body">
+                return <div className="card" className="App-card">
+                    <div className="card-body">
                         <h1><span className="App-card-header">{this.props.header}</span></h1>
-                        <h5 class="card-title">{this.props.title}</h5>
-                        <p class="card-text">{this.props.text}</p>
+                        <h5 className="card-title">{this.props.title}</h5>
+                        <p className="card-text">{this.props.text}</p>
                     </div>
                     </div>;
             }
