@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cd39ea578b6b86d3acab1ad7860d7e0e",
+    "revision": "eed451f68fa540cfb9ad6170aa62d598",
     "url": "/whoami/index.html"
   },
   {
-    "revision": "1a8c23576022b59f9d76",
+    "revision": "dca703ab82bc71966b84",
     "url": "/whoami/static/css/2.266e55a5.chunk.css"
   },
   {
-    "revision": "0bdc172f38babdabfce5",
-    "url": "/whoami/static/css/main.546c3222.chunk.css"
+    "revision": "6d1e3e2fc07a4dac4457",
+    "url": "/whoami/static/css/main.dc042f0c.chunk.css"
   },
   {
-    "revision": "1a8c23576022b59f9d76",
-    "url": "/whoami/static/js/2.b6e19d6d.chunk.js"
+    "revision": "dca703ab82bc71966b84",
+    "url": "/whoami/static/js/2.1e5791ee.chunk.js"
   },
   {
-    "revision": "0bdc172f38babdabfce5",
-    "url": "/whoami/static/js/main.d92a0890.chunk.js"
+    "revision": "6d1e3e2fc07a4dac4457",
+    "url": "/whoami/static/js/main.54252955.chunk.js"
   },
   {
     "revision": "7935c83cbae0c4c167df",
